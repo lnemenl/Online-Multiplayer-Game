@@ -3,7 +3,6 @@ dist/
 build/
 
 # Logs
-# Log files are generated at runtime and should not be versioned.
 logs/
 *.log
 npm-debug.log*
@@ -15,7 +14,6 @@ pids/
 *.pid.lock
 
 # Environment variables
-# CRITICAL: This is a major security rule. Never commit your secrets.
 .env
 .env.*
 # Allow the example environment file to be committed.
@@ -31,7 +29,6 @@ backend/prisma/migrations/
 
 
 # OS generated files
-# These are system-specific and have no place in a shared repository.
 .DS_Store
 Thumbs.db
 ehthumbs.db
