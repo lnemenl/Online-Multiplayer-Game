@@ -56,7 +56,7 @@ The database schema is designed to handle user relationships and game statistics
     ```
 
 2.  **Configure Environment**
-    Create a `.env` file based on the provided example inside backend folder
+    Create a `.env` file based on the provided example inside `backend` folder
     ```bash
     cp .env.example .env
     ```
