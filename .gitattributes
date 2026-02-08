@@ -1,0 +1,7 @@
+# Ignore the Babylon library
+game/lib/* linguist-vendored
+
+# Ignore config files so they don't count as JS
+*.config.js linguist-generated
+*.config.cjs linguist-generated
+*.config.mjs linguist-generated

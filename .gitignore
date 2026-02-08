@@ -1,53 +1,72 @@
+# ------------------------------------------------------
+# 1. Dependencies & Package Managers
+# ------------------------------------------------------
 node_modules/
-dist/
-build/
-
-# Logs
-logs/
-*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-pids/
-*.pid
-*.seed
-*.pid.lock
+pnpm-debug.log*
 
-# Environment variables
+# ------------------------------------------------------
+# 2. Build Outputs & Artifacts (All subfolders)
+# ------------------------------------------------------
+dist/
+build/
+out/
+coverage/
+.nyc_output/
+
+# ------------------------------------------------------
+# 3. Environment Variables (Security)
+# ------------------------------------------------------
+# Ignore all .env files
 .env
 .env.*
-# Allow the example environment file to be committed.
+# BUT keep the example file so devs know what vars to set
 !.env.example
 
-# Database
-# Database files are runtime data, not source code.
-database/
-*.db
-*.db-journal
-backend/database/*.db
-backend/prisma/migrations/
-
-
-# OS generated files
+# ------------------------------------------------------
+# 4. OS & System Files
+# ------------------------------------------------------
 .DS_Store
 Thumbs.db
 ehthumbs.db
 
-# Editor directories and files
+# ------------------------------------------------------
+# 5. IDE & Editor Configs
+# ------------------------------------------------------
+.idea/
+*.swp
+*.swo
+
+# VS Code: Ignore local user state, but keep project settings
 .vscode/*
 !.vscode/settings.json
 !.vscode/extensions.json
+!.vscode/launch.json
 
-.idea/
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+# ------------------------------------------------------
+# 6. Backend / Database Specifics
+# ------------------------------------------------------
+# Ignore actual SQLite database files (runtime data)
+*.db
+*.db-journal
 
-# Test and coverage reports
-coverage/
-.nyc_output/
+# Logs and Process IDs
+logs/
+*.log
+pids/
+*.pid
+*.pid.lock
+*.seed
 
+# Note: We are deliberately NOT ignoring 'prisma/migrations'. 
+# Those MUST be committed.
+
+# ------------------------------------------------------
+# 7. Frontend / Vite Specifics
+# ------------------------------------------------------
 .vite/
-frontend/public/
+
+# Note: We are deliberately NOT ignoring 'frontend/public'. 
+# Static assets MUST be committed.
